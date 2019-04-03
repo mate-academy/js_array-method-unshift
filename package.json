@@ -1,8 +1,8 @@
 {
-  "name": "array-method-pop",
+  "name": "array-method-unshift",
   "version": "1.0.0",
-  "description": "Custom implementation of Array.prototype.pop()",
-  "main": "src/arrayMethodPop.js",
+  "description": "Custom implementation of Array.prototype.unshift()",
+  "main": "src/arrayMethodUnshift.js",
   "scripts": {
     "test": "jest",
     "lint": "eslint **/*.js"
