@@ -1,30 +1,37 @@
 'use strict';
 
-const applyCustomPop = require('./arrayMethodPop');
+const applyCustomUnshift = require('./arrayMethodUnshift');
 
-applyCustomPop();
+applyCustomUnshift();
 
-test('`pop2` is added to [].__proto__', () => {
-    expect(typeof [].pop2).toBe('function');
+test('`unshift2` is added to [].__proto__', () => {
+    expect(typeof [].unshift2).toBe('function');
 });
 
-test('pop single item', () => {
+test('unshift single item', () => {
   const source = [0, 1, 2, 3];
-  const result = source.pop2();
-  expect(source).toEqual([0, 1, 2]);
-  expect(result).toBe(3);
+  const result = source.unshift2(4);
+  expect(source).toEqual([4, 0, 1, 2, 3]);
+  expect(result).toBe(5);
 });
 
-test('pop from empty array', () => {
-  const source = [];
-  const result = source.pop2();
-  expect(source).toEqual([]);
-  expect(result).toBe(undefined);
-});
-
-test('pop ignores arguments', () => {
+test('unshift multiple items', () => {
   const source = [0, 1, 2, 3];
-  const result = source.pop2(2);
-  expect(source).toEqual([0, 1, 2]);
-  expect(result).toBe(3);
+  const result = source.unshift2(4, 5, 6);
+  expect(source).toEqual([4, 5, 6, 0, 1, 2, 3]);
+  expect(result).toBe(7);
+});
+
+test('unshift no items', () => {
+  const source = [0, 1, 2, 3];
+  const result = source.unshift2();
+  expect(source).toEqual([0, 1, 2, 3]);
+  expect(result).toBe(4);
+});
+
+test('unshift an array', () => {
+  const source = [0, 1, 2, 3];
+  const result = source.unshift2([4, 5, 6]);
+  expect(source).toEqual([[4, 5, 6], 0, 1, 2, 3]);
+  expect(result).toBe(5);
 });
