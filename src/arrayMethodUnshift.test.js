@@ -5,7 +5,7 @@ const applyCustomUnshift = require('./arrayMethodUnshift');
 applyCustomUnshift();
 
 test('`unshift2` is added to [].__proto__', () => {
-    expect(typeof [].unshift2).toBe('function');
+  expect(typeof [].unshift2).toBe('function');
 });
 
 test('unshift single item', () => {

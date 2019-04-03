@@ -1,5 +1,5 @@
 module.exports = {
-  extends: 'standart',
+  extends: 'standard',
   env: {
     node: true,
     jest: true
@@ -10,7 +10,7 @@ module.exports = {
     'no-proto': 0
   },
   parserOptions: {
-    sourceType: 'script'
+    sourceType: 'script',
   },
   plugins: ['jest']
 };
