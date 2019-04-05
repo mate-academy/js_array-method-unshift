@@ -1,4 +1,4 @@
-# Custom implementation of Array.prototype.pop()
+# Custom implementation of Array.prototype.unshift()
 
 **Read the guideline before start**
 
