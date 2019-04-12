@@ -2,10 +2,9 @@
 
 /**
  * Implement method unshift
- *
  */
 function applyCustomUnshift() {
-  [].__proto__.unshift2 = function() {
+  [].__proto__.unshift2 = function(...elements) {
     // write code here
   };
 }

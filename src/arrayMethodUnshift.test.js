@@ -9,6 +9,11 @@ test('unshift2 is added to [].__proto__', () => {
     .toBeInstanceOf(Function);
 });
 
+test(`unshift2 doesn't call default unshift`, () => {
+  expect([].unshift2.toString().includes('.unshift('))
+    .toBe(false);
+});
+
 test('unshift single item', () => {
   const source = [0, 1, 2, 3];
   const result = source.unshift2(4);
