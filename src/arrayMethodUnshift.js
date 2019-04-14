@@ -11,7 +11,7 @@ function applyCustomUnshift() {
       this[i + howManyArgs] = this[i];
     }
 
-    for (let k = 0; k < args.length; k++) {
+    for (let k = 0; k < howManyArgs; k++) {
       this[k] = args[k];
     }
     return this.length;
