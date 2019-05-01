@@ -6,7 +6,7 @@ applyCustomUnshift();
 
 test('unshift2 is added to [].__proto__', () => {
   expect([].unshift2)
-    .toBeInstanceOf('function');
+    .toBeInstanceOf(Function);
 });
 
 test('unshift single item', () => {
