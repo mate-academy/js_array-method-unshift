@@ -3,6 +3,7 @@
 /**
  * Implement method unshift
  */
+
 function applyCustomUnshift() {
   [].__proto__.unshift2 = function(...elements) {
     if (this.length === 0) {
