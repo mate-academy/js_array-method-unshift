@@ -5,7 +5,13 @@
  */
 function applyCustomUnshift() {
   [].__proto__.unshift2 = function(...elements) {
-    // write code here
+    const shifted = [...elements, ...this];
+
+    for (let i = 0; i < shifted.length; i++) {
+      this[i] = shifted[i];
+    }
+
+    return this.length;
   };
 }
 
