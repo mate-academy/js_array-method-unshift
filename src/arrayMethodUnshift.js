@@ -11,6 +11,7 @@ function applyCustomUnshift() {
       };
       this[0] = elements[i];
     };
+
     return this.length;
   };
 }
