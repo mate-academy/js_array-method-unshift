@@ -5,7 +5,9 @@
  */
 function applyCustomUnshift() {
   [].__proto__.unshift2 = function(...elements) {
-    // write code here
+    this.splice(0, this.length, ...elements, ...this);
+
+    return this.length;
   };
 }
 
