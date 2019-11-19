@@ -8,15 +8,11 @@ function applyCustomUnshift() {
     if (this.length < 1) {
       return undefined;
     }
-    const afterShift = [];
-    for (let i = 0; i < elements.length; i++) {
-      afterShift[i] = elements[i];
-    }
     for (let i = 0; i < this.length; i++) {
-      afterShift[afterShift.length] = this[i];
+      elements[elements.length] = this[i];
     }
-    for (let i = 0; i < afterShift.length; i++) {
-      this[i] = afterShift[i];
+    for (let i = 0; i < elements.length; i++) {
+      this[i] = elements[i];
     }
     return this.length;
   };
