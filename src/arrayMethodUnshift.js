@@ -9,13 +9,12 @@ function applyCustomUnshift() {
       return undefined;
     }
 
-    const copyArr = [...this];
-    this.length = 0;
+    for (let i = 0; i < this.length; i++) {
+      elements[elements.length] = this[i];
+    }
+
     for (let i = 0; i < elements.length; i++) {
       this[i] = elements[i];
-    }
-    for (let i = 0; i < copyArr.length; i++) {
-      this[this.length] = copyArr[i];
     }
 
     return this.length;
