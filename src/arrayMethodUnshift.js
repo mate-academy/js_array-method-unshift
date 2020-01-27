@@ -9,14 +9,21 @@ function applyCustomUnshift() {
       return undefined;
     }
 
-    this.reverse();
+    const originalPart = [];
 
-    for (let i = elements.length - 1; i >= 0; i--) {
-      this.length += 1;
-      this[this.length - 1] = elements[i];
+    for (let i = 0; i < this.length; i++) {
+      originalPart[originalPart.length] = this[i];
     }
 
-    this.reverse();
+    this.length = 0;
+
+    for (let i = 0; i < elements.length; i++) {
+      this[this.length] = elements[i];
+    }
+
+    for (let i = 0; i < originalPart.length; i++) {
+      this[this.length] = originalPart[i];
+    }
 
     return this.length;
   };
