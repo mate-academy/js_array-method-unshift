@@ -17,8 +17,10 @@ test(`unshift2 doesn't call default unshift`, () => {
 test('unshift single item', () => {
   const source = [0, 1, 2, 3];
   const result = source.unshift2(4);
+
   expect(source)
     .toEqual([4, 0, 1, 2, 3]);
+
   expect(result)
     .toBe(5);
 });
@@ -26,8 +28,10 @@ test('unshift single item', () => {
 test('unshift multiple items', () => {
   const source = [0, 1, 2, 3];
   const result = source.unshift2(4, 5, 6);
+
   expect(source)
     .toEqual([4, 5, 6, 0, 1, 2, 3]);
+
   expect(result)
     .toBe(7);
 });
@@ -35,8 +39,10 @@ test('unshift multiple items', () => {
 test('unshift no items', () => {
   const source = [0, 1, 2, 3];
   const result = source.unshift2();
+
   expect(source)
     .toEqual([0, 1, 2, 3]);
+
   expect(result)
     .toBe(4);
 });
@@ -44,8 +50,10 @@ test('unshift no items', () => {
 test('unshift an array', () => {
   const source = [0, 1, 2, 3];
   const result = source.unshift2([4, 5, 6]);
+
   expect(source)
     .toEqual([[4, 5, 6], 0, 1, 2, 3]);
+
   expect(result)
     .toBe(5);
 });
