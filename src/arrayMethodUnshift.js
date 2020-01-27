@@ -5,7 +5,11 @@
  */
 function applyCustomUnshift() {
   [].__proto__.unshift2 = function(...elements) {
-    this.splice(0, 0, ...elements);
+    const unshiftedArray = [...elements, ...this];
+
+    for (let i = 0; i < unshiftedArray.length; i += 1) {
+      this[i] = unshiftedArray[i];
+    }
 
     return this.length;
   };
