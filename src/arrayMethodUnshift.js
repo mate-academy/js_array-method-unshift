@@ -5,8 +5,12 @@
  */
 function applyCustomUnshift() {
   [].__proto__.unshift2 = function(...elements) {
-    for (const key of elements.reverse()) {
-      this.splice(0, 0, key);
+    for (let i = this.length + elements.length - 1; i >= elements.length; i--) {
+      this[i] = this[i - elements.length];
+    }
+
+    for (let i = 0; i < elements.length; i++) {
+      this[i] = elements[i];
     }
 
     return this.length;
