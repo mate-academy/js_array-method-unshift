@@ -3,8 +3,8 @@
 /**
  * Implement method unshift
  */
-function applyCustomUnshift(...elements) {
-  [].__proto__.unshift2 = function() {
+function applyCustomUnshift() {
+  [].__proto__.unshift2 = function(...elements) {
     for (let i = elements.length - 1; i >= 0; i--) {
       for (let j = this.length; j > 0; j--) {
         this[j] = this[j - 1];
