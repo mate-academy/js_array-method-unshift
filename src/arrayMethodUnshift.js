@@ -9,13 +9,15 @@ function applyCustomUnshift() {
       return;
     }
 
-    const list = [...elements, ...this];
-
-    for (let i = 0; i < list.length; i++) {
-      this[i] = list[i];
+    for (let i = 0; i < this.length; i++) {
+      elements[elements.length] = this[i];
     }
 
-    return list.length;
+    for (let i = 0; i < elements.length; i++) {
+      this[i] = elements[i];
+    }
+
+    return this.length;
   };
 }
 
