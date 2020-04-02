@@ -8,14 +8,12 @@ function applyCustomUnshift() {
     // write code here
     const arr = this;
 
-    for (let i = elements.length; i > 0; i--) {
-      const item = elements[i - 1];
+    for (let i = arr.length - 1; i >= 0; i--) {
+      this[i + elements.length] = arr[i];
+    }
 
-      for (let j = arr.length; j > 0; j--) {
-        arr[j] = arr[j - 1];
-      }
-
-      arr[0] = item;
+    for (let i = 0; i < elements.length; i++) {
+      arr[i] = elements[i];
     }
 
     return arr.length;
