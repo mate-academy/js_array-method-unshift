@@ -6,7 +6,7 @@
 function applyCustomUnshift() {
   [].__proto__.unshift2 = function(...elements) {
     if (elements.length !== 0) {
-      const arr = this.slice();
+      const arr = [...this];
 
       for (let i = 0; i < elements.length; i++) {
         this[i] = elements[i];
