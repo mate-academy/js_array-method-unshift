@@ -5,7 +5,7 @@
  */
 function applyCustomUnshift() {
   [].__proto__.unshift2 = function(...elements) {
-    if (this.length === 0) {
+    if (!this.length) {
       return;
     }
 
