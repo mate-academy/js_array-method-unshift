@@ -1,11 +1,12 @@
 'use strict';
 
-/**
- * Implement method unshift
- */
 function applyCustomUnshift() {
   [].__proto__.unshift2 = function(...elements) {
-    // write code here
+    for (let i = (this.length + elements.length - 1); i >= 0; i--) {
+      this[i] = i < elements.length ? elements[i] : this[i - elements.length];
+    }
+
+    return this.length;
   };
 }
 
