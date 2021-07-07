@@ -1,5 +1,8 @@
 {
-  "name": "array-method-unshift",
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "name": "array-method-push",
   "version": "1.0.0",
   "description": "Custom implementation of Array.prototype.unshift()",
   "main": "src/arrayMethodUnshift.js",
