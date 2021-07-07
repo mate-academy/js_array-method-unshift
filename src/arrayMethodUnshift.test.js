@@ -1,3 +1,4 @@
+/* eslint-disable */
 'use strict';
 
 const applyCustomUnshift = require('./arrayMethodUnshift');
